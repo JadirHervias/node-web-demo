@@ -1,3 +1,5 @@
+const html = (title, mainText) => {
+  return Buffer.from(`
 <html lang="en">
 
 <head>
@@ -375,3 +377,7 @@
 </body>
 
 </html>
+`);
+};
+
+module.exports = html;
