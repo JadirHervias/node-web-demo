@@ -1,4 +1,4 @@
-const html = (title, mainText) => {
+const html = (title, data) => {
   return Buffer.from(`
 <html lang="en">
 
@@ -321,7 +321,7 @@ const html = (title, mainText) => {
       </div>
     </nav>
   </div>
-
+${data}
   <div class="bg-amarillo contenedor sombra">
     <form id="contacto" action="#">
       <legend>Contáctenos <span>Todos los campos son obligatorios</span> </legend>

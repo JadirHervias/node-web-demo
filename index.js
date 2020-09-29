@@ -1,14 +1,11 @@
 const http = require("http");
-const html = require("./templates/index.js");
+const router = require("./crud/router");
 
 const port = 5000;
-const template = html("Tarea", "Hola mundo!");
+
 
 http
-  .createServer((req, res) => {
-    res.write(template);
-    res.end();
-  })
+  .createServer(router)
   .listen(port, () => {
     console.log(`Server listening on ${port}`);
   });
