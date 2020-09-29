@@ -1,6 +1,6 @@
 const http = require("http");
 const fs = require("fs");
-const html = require("./templates/index.js");
+const html = require("./templates/index.html");
 
 const port = 5000;
 const template = html("Tarea", "Hola mundo!");
