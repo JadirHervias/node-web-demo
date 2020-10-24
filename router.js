@@ -1,3 +1,6 @@
+const { getFilePath, getContentType } = require('./mimeType');
+const fs = require('fs');
+
 /**
  * Application router
  * @param {Request} req Endpoint request object.
@@ -6,6 +9,9 @@
 const router = (req, res) => {
   const filePath = getFilePath(req);
   const contentType = getContentType(filePath);
+
+  console.log(req);
+  console.log(filePath);
 
   fs.readFile(filePath, (error, content) => {
     if (error) {

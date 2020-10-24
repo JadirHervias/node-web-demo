@@ -1,8 +1,15 @@
-const getFilePath = ({ url }) => {
-  const filePath = '.' + request.url;
+const path = require('path');
 
-  if (filePath == './') {
-    filePath = './index.html';
+const getFilePath = ({ url }) => {
+  const TEMPLATES_PATH = './templates';
+
+  let filePath = `${TEMPLATES_PATH}${url}`;
+
+  console.log('awqwq');
+  console.log(filePath);
+
+  if (filePath === './' || filePath === './templates/') {
+    filePath = './templates/index.html';
   }
 
   return filePath;
@@ -10,7 +17,7 @@ const getFilePath = ({ url }) => {
 
 const getContentType = (filePath) => {
   const extname = String(path.extname(filePath)).toLowerCase();
-  const contentType = 'text/html';
+  let contentType = 'text/html';
   const mimeTypes = {
     '.html': 'text/html',
     '.ico': 'image/x-icon' || 'image/vnd.microsoft.icon',
@@ -30,4 +37,9 @@ const getContentType = (filePath) => {
   };
   contentType = mimeTypes[extname] || 'application/octet-stream';
   return contentType;
+};
+
+module.exports = {
+  getFilePath,
+  getContentType,
 };
