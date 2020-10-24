@@ -1,4 +1,4 @@
-const html = (title, data) => {
+const html = (title, totalContacts) => {
   return Buffer.from(`
 <html lang="en">
 
@@ -277,14 +277,13 @@ const html = (title, data) => {
   }
 </style>
 
-
 <body>
 
   <div class="container-fluid sticky-top" style="background-color: #6162F2;">
     <nav class="navbar navbar-expand-md navbar-dark container" style="background-color: #6162F2;">
       <a class="navbar-brand" href="#">
         <img
-          src="https://lh3.googleusercontent.com/proxy/h6TuZEXEXnZXrvP3V_kJHOMFp0aZlphctahPYpIkpQK0DhGlTRqMx6Zn2wiReEvvwz-WcgH5mn0ocqzi-AxyAu3loomGuIGVNw"
+          src="https://i.pinimg.com/originals/af/f2/16/aff216eb233cd9fdb730f8f3e16159a7.jpg"
           width="100" height="60" class="d-inline-block align-top" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -298,7 +297,7 @@ const html = (title, data) => {
             <a class="nav-link" href="#">Inicio</a>
           </li>
           <li class="nav-item active pr-3">
-            <a class="nav-link" href="#">Nosotros</a>
+            <a class="nav-link" href="/nosotros">Nosotros</a>
           </li>
           <li class="nav-item active pr-3">
             <a class="nav-link" href="#">Nuestros Servicios</a>
@@ -321,10 +320,9 @@ const html = (title, data) => {
       </div>
     </nav>
   </div>
-${data}
   <div class="bg-amarillo contenedor sombra">
     <form id="contacto" action="#">
-      <legend>Contáctenos <span>Todos los campos son obligatorios</span> </legend>
+      <legend>Contáctenos, contamos con ${totalContacts} contactos en Lima <span>Todos los campos son obligatorios</span> </legend>
 
       <div class="campos">
         <div class="campo">
