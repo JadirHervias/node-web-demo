@@ -5,9 +5,6 @@ const getFilePath = ({ url }) => {
 
   let filePath = `${TEMPLATES_PATH}${url}`;
 
-  console.log('awqwq');
-  console.log(filePath);
-
   if (filePath === './' || filePath === './templates/') {
     filePath = './templates/index.html';
   }

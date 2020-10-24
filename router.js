@@ -10,14 +10,11 @@ const router = (req, res) => {
   const filePath = getFilePath(req);
   const contentType = getContentType(filePath);
 
-  console.log(req);
-  console.log(filePath);
-
   fs.readFile(filePath, (error, content) => {
     if (error) {
       if (error.code == 'ENOENT') {
         fs.readFile('./404.html', (error, content) => {
-          res.writeHead(200, { 'Content-Type': contentType });
+          res.writeHead(404, { 'Content-Type': contentType });
           res.end(content, 'utf-8');
         });
       }
@@ -29,29 +26,8 @@ const router = (req, res) => {
       );
       res.end();
     }
-    switch (filePath) {
-      case 'favicon.ico':
-        res.write();
-        res.end(content, 'utf-8');
-        break;
-      case 'bienvenido.html':
-        res.end(content, 'utf-8');
-        break;
-      case 'nosotros.html':
-        res.end(content, 'utf-8');
-        break;
-      case 'servicios.html':
-        res.end(content, 'utf-8');
-        break;
-      case 'contactos.html':
-        res.end(content, 'utf-8');
-        break;
-      default:
-        res.writeHead(404, { 'Content-Type': 'text/html' });
-        // res.write('404');
-        res.end(content, 'utf-8');
-        break;
-    }
+    res.writeHead(200, { 'Content-Type': contentType });
+    res.end(content, 'utf-8');
   });
 };
 
