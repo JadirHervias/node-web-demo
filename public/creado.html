@@ -12,7 +12,7 @@
   :root {
     --primario: rgb(223, 226, 255);
     --secundario: rgba(25, 128, 255, 0.299);
-    --primarioOscuro: rgb(92, 108, 255);
+    --primarioOscuro: rgb(189, 195, 253);
     --fuentePrimaria: 'Arial', Helvetica, sans-serif;
     --fuenteSecundaria: 'Poppins', sans-serif;
   }
@@ -288,64 +288,64 @@
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active pr-3">
-                <a class="nav-link" href="index.html">Bienvenida</a>
-            </li>
-            <li class="nav-item active pr-3">
-                <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item active pr-3">
-                <a class="nav-link" href="servicios.html">Nuestros Servicios</a>
-            </li>
-            <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="contacto.html" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Contáctenos
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="contacto.html">Nuevo Contacto</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="creado.html">Lista de Contactos</a>
-                </div>
-            </li>
-        </ul>
-    </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active pr-3">
+                    <a class="nav-link" href="index.html">Bienvenida</a>
+                </li>
+                <li class="nav-item active pr-3">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item active pr-3">
+                    <a class="nav-link" href="servicios.html">Nuestros Servicios</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="contacto.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contáctenos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="contacto.html">Nuevo Contacto</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="creado.html">Lista de Contactos</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
   </div>
 
   <div class="bg-amarillo contenedor sombra">
-    <form id="contacto" method="POST" action="/contactos/nuevo">
-      <legend>Contáctenos <span>Todos los campos son obligatorios</span> </legend>
+    <form id="contacto" action="#">
+      <legend>Contacto Agregado</legend>
 
       <div class="campos">
         <div class="campo">
           <label for="nombre">Nombre:</label>
-          <input type="text" placeholder="Ingrese su Nombre" name="nombre">
+          <input type="text" placeholder="Ingrese su Nombre" id="nombre" disabled>
         </div>
         <div class="campo">
           <label for="apellido">Apellido:</label>
-          <input type="text" placeholder="Ingrese su Apellido" name="apellido">
+          <input type="text" placeholder="Ingrese su Apellido" id="apellido" disabled>
         </div>
         <div class="campo">
-          <label for="celular">Fecha Nacimiento:</label>
-          <input type="text" placeholder="Ingrese fecha nacimiento" name="fechaNacimiento">
+          <label for="celular">Celular:</label>
+          <input type="text" placeholder="Ingrese su Celular" id="celular" disabled>
         </div>
 
       </div>
       <div class="campos">
         <div class="campo">
           <label for="telefono">Telefono:</label>
-          <input type="text" placeholder="Ingrese su Telefono" name="telefono">
+          <input type="text" placeholder="Ingrese su Telefono" id="telefono" disabled>
         </div>
         <div class="campo">
           <label for="email">Email:</label>
-          <input type="text" placeholder="Ingrese su Email" name="correo">
+          <input type="text" placeholder="Ingrese su Email" id="email" disabled>
         </div>
         <div class="campo">
-          <label for="dni">Mensaje:</label>
-          <input type="text" placeholder="Mensaje" name="mensaje">
+          <label for="dni">DNI:</label>
+          <input type="text" placeholder="Ingrese su DNI" id="dni" disabled>
         </div>
 
       </div>
