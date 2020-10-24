@@ -1,4 +1,2 @@
-id,nombre,apellido
-1,Jadir,Hervias
-2,Genaro,Salas
-3,Jonathan,Huarca
+id,nombre,apellido,correo,telefono,fechaNacimiento,mensaje
+0bseMIiQ,Jadir,Hervias,jadirhervias%40gmail.com,945638628,2000-07-02,CHISTE

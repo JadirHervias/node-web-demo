@@ -1,12 +1,12 @@
 const path = require('path');
 
 const getFilePath = ({ url }) => {
-  const TEMPLATES_PATH = './templates';
+  const TEMPLATES_PATH = './public';
 
   let filePath = `${TEMPLATES_PATH}${url}`;
 
-  if (filePath === './' || filePath === './templates/') {
-    filePath = './templates/index.html';
+  if (filePath === './' || filePath === './public/') {
+    filePath = './public/index.html';
   }
 
   return filePath;
